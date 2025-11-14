@@ -1,0 +1,26 @@
+strategy_v4/
+  ├── engines/
+  │   ├── TickEngine.py              # 保留，支援 v3/v4 模式切換
+  │   ├── DecisionEngine_v2.py       # 新：回歸分數判斷
+  │   ├── DecisionEngine.py          # 舊：規則型（baseline）
+  │   ├── StrategyState.py           # 保留，小改：外部化風控參數
+  │   ├── IndicatorEngine.py         # 保留，中改：特徵輸出
+  │   ├── MultiTimeframeEngine.py    # 保留，小改
+  │   └── ExitStrategySimulator.py   # 保留：出場模擬
+  ├── models/
+  │   ├── BiasRegressor.py           # 新：bias 機率
+  │   └── ParamsStore.py             # 新：回歸權重/版本管理
+  ├── pipeline/
+  │   ├── DataPipeline.py            # 新：CSV/歷史資料讀取
+  │   ├── FeatureScaler.py           # 新：標準化/缺值填補
+  │   └── polars_indicator_utils.py  # 保留：統一到 pipeline
+  ├── io/
+  │   ├── TickRecorder.py            # 保留，小改
+  │   ├── TradeLogger.py             # 保留，中改：增欄位
+  │   └── TradeAnalyzer.py           # 保留，中改：分群/版本
+  ├── KlineInitializer.py            # 保留，小改
+  ├── TickPatternTracker.py          # 保留（選配作為特徵）
+  ├── RegressionCalibrator.py        # 新：離線校正腳本
+  ├── StrategyLoop.py                # 保留，小改：保險平倉、模式切換
+  ├── main.py                        # 保留，小改：模式/版本/資料來源
+  └── README.md                      # 使用說明與比較方法
