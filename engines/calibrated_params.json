@@ -1,0 +1,17 @@
+{
+  "version": "v4-init",
+  "weights": {
+    "rsi": 0.12,
+    "macd": 0.22,
+    "macd_signal": -0.08,
+    "kd_k": 0.10,
+    "kd_d": -0.06,
+    "atr": -0.06,
+    "adx": 0.10,
+    "vwap": 0.10,
+    "ema5": 0.10,
+    "ema20": 0.10,
+    "bband_pos": 0.06,
+    "volume": 0.04
+  }
+}
